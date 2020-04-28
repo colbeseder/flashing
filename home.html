@@ -4,11 +4,18 @@
 </head>
 <body>
 <script>
+var pause = 700;
+var colors = ['#0038B8', 'white'];
+
+var p = parseInt(location.hash.slice(1), 10);
+if (typeof p === "number" && p > 0){
+	pause = p;
+}
+
 function flash(color){
 	document.body.style.backgroundColor = color;
 }
-var pause = 700;
-var colors = ['#0038B8', 'white'];
+
 var i = 0;
 setInterval(function(){
 	flash(colors[i]);
