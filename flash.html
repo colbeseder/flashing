@@ -1,0 +1,12 @@
+<script>
+function flash(color){
+	document.body.style.backgroundColor = color;
+}
+var pause = 700;
+var colors = ['#0038B8', 'white'];
+var i = 0;
+setInterval(function(){
+	flash(colors[i]);
+	i = (i+1)%colors.length;
+}, pause);
+</script>
